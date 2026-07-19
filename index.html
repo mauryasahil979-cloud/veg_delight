@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veg Delight Food Ordering</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+🥗 Veg Delight
+</div>
+
+<nav>
+
+<a href="#">Home</a>
+<a href="#menu">Menu</a>
+<a href="#cart">Cart</a>
+<a href="#orders">Past Orders</a>
+
+<button id="loginBtn">Login</button>
+
+</nav>
+
+</header>
+
+<div class="login-box" id="loginBox">
+
+<h2>Login</h2>
+
+<input type="email" placeholder="Email">
+
+<input type="password" placeholder="Password">
+
+<button>Login</button>
+
+<p>New User? <a href="#">Sign Up</a></p>
+
+</div>
+
+<section class="hero">
+
+<h1>Fresh Vegetarian Food Delivered Fast</h1>
+
+<p>Healthy • Hygienic • Delicious</p>
+
+<input type="text" id="search"
+placeholder="Search your favourite dish...">
+
+</section>
+
+<section class="menu" id="menu">
+
+<h2>Popular Veg Dishes</h2>
+
+<div class="cards">
+
+<!- 1 ->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=800" alt="Paneer Butter Masala">
+
+<h3>Paneer Butter Masala</h3>
+
+<p>₹260</p>
+
+<button onclick="addToCart('Paneer Butter Masala',260)">
+Add to Cart
+</button>
+
+<button class="buy">Fast Order</button>
+
+</div>
+
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREitlEgvluAKKwfes0sx6yzrCn1y-dIVmTkSyAr1s_Jg&s=10" alt="Food Image">
+
+<h3>Chole Bhature</h3>
+
+<p>₹180</p>
+
+<button onclick="addToCart('Chole Bhature',180)">
+Add to Cart
+</button>
+
+<button class="buy">Fast Order</button>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW3FNcTILTRAAwSGuteFmCIMIW6gUpp-UePoDYDN_GMg&s=10" alt="Food Image">
+
+<h3>Aloo Paratha</h3>
+
+<p>₹100</p>
+
+<button onclick="addToCart('Aloo Paratha',100)">
+Add to Cart
+</button>
+
+<button class="buy">Fast Order</button>
+
+</div>
+
+<!-- 4 -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=800" alt="Masala Dosa">
+
+<h3>Masala Dosa</h3>
+
+<p>₹160</p>
+
+<button onclick="addToCart('Masala Dosa',160)">
+Add to Cart
+</button>
+
+<button class="buy">Fast Order</button>
+
+</div>
+<!-- 5 -->
+
+<div class="card">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1ilr_v-Ef-duLTof9lJrVYt70EpVbzqGbXKrnLsgWRg&s=10" alt="Idli Sambar">
+
+<h3>Idli Sambar</h3>
+
+<p>₹120</p>
+
+<button onclick="addToCart('Idli Sambar',120)">
+Add to Cart
+</button>
+
+<button class="buy">Fast Order</button>
+
+</div>
+
+<!-- 6 -->
+
+<div class="card">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd6gChdsWZBPkuDzKulvahqnnH4wm7OFLsjexvL_wA7g&s=10" alt="Food Image">
+
+<h3>Medu Vada</h3>
+
+<p>₹130</p>
+
+<button onclick="addToCart('Medu Vada',130)">
+Add to Cart
+</button>
+
+<button class="buy">Fast Order</button>
+
+</div>
+
+<!-- 7 -->
+
+<div class="card">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHVw9NI5DizuY9CJsd1-pk8lxV3y3xT-O2pD7QgKMLpQ&s=10" alt="Food Image">
+
+<h3>Misal Pav</h3>
+
+<p>₹140</p>
+
+<button onclick="addToCart('Misal Pav',140)">
+Add to Cart
+</button>
+
+<button class="buy">Fast Order</button>
+
+</div>
+
+<!-- 8 -->
+
+<div class="card">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR71YXO6I2K5C-88wNLJsr1rf3LnszIlIyPFIArj_QI_A&s=10" alt="Food Image">
+
+<h3>Vada Pav</h3>
+
+<p>₹40</p>
+
+<button onclick="addToCart('Vada Pav',40)">
+Add to Cart
+</button>
+
+<button class="buy">Fast Order</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cart-section" id="cart">
+
+<h2>Your Cart</h2>
+
+<div id="cartItems">
+<p>No items added.</p>
+</div>
+
+<p>
+Quantity :
+<span id="quantity">0</span>
+</p>
+
+</section>
+
+<section class="bill">
+
+<h2>Bill Details</h2>
+
+<div class="row">
+<span>Subtotal</span>
+<span id="subtotal">₹0</span>
+</div>
+
+<div class="row">
+<span>GST (5%)</span>
+<span id="gst">₹0</span>
+</div>
+
+<div class="row">
+<span>Delivery Fee</span>
+<span>₹40</span>
+</div>
+
+<div class="row total">
+<strong>Total</strong>
+<strong id="total">₹40</strong>
+</div>
+
+</section>
+
+<section class="delivery">
+
+<h2>Delivery Details</h2>
+
+<input type="text" placeholder="Full Name">
+
+<input type="text" placeholder="Delivery Address">
+
+<input type="tel" placeholder="Phone Number">
+
+<select>
+
+<option>Select Payment Mode</option>
+<option>Cash On Delivery</option>
+<option>UPI</option>
+<option>Credit Card</option>
+<option>Debit Card</option>
+<option>Net Banking</option>
+
+</select>
+
+<button class="place-order">
+Place Order
+</button>
+
+</section>
+
+<section id="orders">
+
+<h2>Past Orders</h2>
+
+<div id="orderHistory">
+No Previous Orders
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Veg Delight | Fresh Vegetarian Food</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
